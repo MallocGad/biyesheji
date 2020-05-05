@@ -1,0 +1,29 @@
+#server:
+#  port: 8080
+#greenuser:
+#    name: 黄涛
+#    email: ht0329@126.com
+#可以配置依赖注入
+#---文档块
+#spring:
+#  profiles:
+#    active: dev #激活dev  也可以启动时加启动参数指定dev，或者使用虚拟机启动参数指定，优先级一次递增d
+#---
+server:
+  port: 8888
+  servlet:
+    context-path: /vg
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/greenhouse?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 120110
+    type: com.alibaba.druid.pool.DruidDataSource
+#mybatis
+mybatis:
+  #指定mapper文件的路径，默认在mapper接口中的包里面s
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  config-location: classpath:mybatis/config/mybatis-config.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

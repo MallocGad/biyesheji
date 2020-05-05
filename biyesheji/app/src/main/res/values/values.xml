@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_margin">25dp</dimen>
+    <dimen name="div_margin_top">10dp</dimen>
+    <dimen name="dividerHeight">1dp</dimen>
+    <dimen name="text_padding">3dp</dimen>
+</resources>

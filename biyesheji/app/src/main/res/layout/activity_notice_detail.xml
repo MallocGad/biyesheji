@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="消息详情"
+        android:background="@color/colorGray"
+        android:textColor="@color/colorBlack"
+        android:textSize="22sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        >
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:textColor="@color/colorBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通知消息标题"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/time"
+                    android:drawablePadding="10dp"
+                    android:text="2018/12/2 3:40"
+                    android:gravity="right"
+                    android:paddingRight="30dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文章内容胜多负少的金凤凰闪电发货神鼎飞丹砂发多少水电费第三方第三方对方水电费斯蒂芬斯蒂芬斯蒂芬第三方"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:padding="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="40dp"
+                android:text="发布者：信息发布处"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

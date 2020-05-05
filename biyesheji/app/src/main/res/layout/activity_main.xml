@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAllBackgrond"
+    tools:context=".MainActivity">
+    <!--温室控制页-->
+    <LinearLayout
+        android:id="@+id/content2"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/colorGray"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:tint="@color/colorBlue"
+                android:layout_height="match_parent"
+                android:src="@mipmap/now_house"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:text="当前温室："
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+            <Spinner
+                android:id="@+id/house_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:prompt="@string/spinnerTitle"
+                android:spinnerMode="dialog"/>
+
+        </LinearLayout>
+    <ScrollView
+        android:id="@+id/center2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <!--内容开始页-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="@dimen/div_margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="温馨提示：选择列表中只会展示您所管理的温室i哦~"/>
+            <!--  温室信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/div_margin_top"
+                android:background="@drawable/button_bg"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/button_margin"
+                android:paddingLeft="@dimen/div_margin_top"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/div_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="温室作物：" />
+                    <TextView
+                        android:id="@+id/plant_name"
+                        android:padding="@dimen/text_padding"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@color/colorGrayDark"
+                        android:layout_height="wrap_content"
+                        android:text="未选择温室"
+                        android:maxLines="1"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/div_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                <TextView
+                    android:layout_marginBottom="@dimen/div_margin_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="种植时间：" />
+                <TextView
+                    android:id="@+id/plant_time"
+                    android:background="@drawable/button_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/time"
+                    android:textSize="19sp"
+                    android:padding="@dimen/text_padding"
+                    android:text=" ---------"/>
+                </LinearLayout>
+                <!-- 还没有实现 -->
+<!--                <Button-->
+<!--                    android:id="@+id/toVideo"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="实时监控"/>-->
+            </LinearLayout>
+            <!--数据统计-->
+            <LinearLayout
+                android:paddingBottom="@dimen/button_margin"
+                android:background="@drawable/button_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:text="  数据统计"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@mipmap/sjtj"
+                android:textColor="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/div_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/data_gztj"
+                        android:layout_toStartOf="@id/data_wdtj"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:text="光照统计"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/data_wdtj"
+                        android:layout_centerInParent="true"
+                        android:text="温度统计"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:id="@+id/data_eyht"
+                        android:text="二氧化碳"
+                        android:layout_toEndOf="@id/data_wdtj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <Button
+                        android:id="@+id/data_phtj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:layout_toStartOf="@id/data_sdtj"
+                        android:text="PH统计" />
+
+                    <Button
+                        android:id="@+id/data_sdtj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="湿度统计" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- -->
+            <!--设备管理-->
+            <LinearLayout
+                android:paddingBottom="@dimen/button_margin"
+                android:background="@drawable/button_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="  设备控制"
+                    android:drawableLeft="@mipmap/sjkz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"/>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/div_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Switch
+                        android:id="@+id/device_tfxt"
+                        android:layout_toStartOf="@id/device_ssq"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:text="通风系统"
+                        android:track="@drawable/track_selector"
+                        android:thumb="@drawable/thumb_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Switch
+                        android:id="@+id/device_ssq"
+                        android:layout_centerInParent="true"
+                        android:track="@drawable/track_selector"
+                        android:thumb="@drawable/thumb_selector"
+                        android:text="洒水系统"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Switch
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:id="@+id/device_bwxt"
+                        android:track="@drawable/track_selector"
+                        android:thumb="@drawable/thumb_selector"
+                        android:text="保温系统"
+                        android:layout_toEndOf="@id/device_ssq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top"
+                    android:layout_marginBottom="50dp">
+                    <!--这里布局有点问题-->
+
+                    <Switch
+                        android:id="@+id/device_nyps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/track_selector"
+                        android:thumb="@drawable/thumb_selector"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:layout_toStartOf="@id/device_qtsb"
+                        android:text="农药喷洒" />
+
+                    <Switch
+                        android:id="@+id/device_qtsb"
+                        android:track="@drawable/track_selector"
+                        android:thumb="@drawable/thumb_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="温室天窗" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+    <!--信息页-->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:background="@color/colorGray"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="通知消息"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+            <ScrollView
+                android:id="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/msgList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--"我的"页面-->
+        <LinearLayout
+            android:id="@+id/content3"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/buttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/header3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.1"
+                    android:background="@color/colorGray"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="个人中心"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/center3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:layout_below="@+id/header3">
+                <LinearLayout
+                    android:paddingTop="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@mipmap/head"/>
+                    <LinearLayout
+                        android:paddingTop="50dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:gravity="right"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="  用户名  ："/>
+                        <TextView
+                            android:id="@+id/username"
+                            android:background="@color/colorGray"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.6"
+                            android:paddingLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:text="黄涛"
+                            />
+                    </LinearLayout> <LinearLayout
+                        android:layout_marginTop="@dimen/div_margin_top"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:gravity="right"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="  邮    箱  ："/>
+                        <TextView
+                            android:id="@+id/email"
+                            android:background="@color/colorGray"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.6"
+                            android:paddingLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:text="ht0329@qq.com"
+                            />
+                    </LinearLayout> <LinearLayout
+                        android:layout_marginTop="@dimen/div_margin_top"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:gravity="right"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="创建日期："/>
+                        <TextView
+                            android:id="@+id/create_time"
+                            android:background="@color/colorGray"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.6"
+                            android:paddingLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:text="2019/12/20"
+                            />
+                    </LinearLayout> <LinearLayout
+                        android:layout_marginTop="@dimen/div_margin_top"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:gravity="right"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="角色信息："/>
+                        <TextView
+                            android:id="@+id/role"
+                            android:background="@color/colorGray"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.6"
+                            android:paddingLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:textSize="20sp"
+                            android:text="user"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/div_margin_top"
+                        android:layout_width="300dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/to_recored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="查看设备记录"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/exit"
+                            android:layout_margin="30dp"
+                            android:background="#5577FF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="退出应用"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+            </LinearLayout>
+    <!--底部切换栏-->
+    <LinearLayout
+        android:id="@+id/buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorGrayDark"
+        android:orientation="horizontal"
+        android:paddingLeft="60dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/msg"
+            android:tint="@color/colorNoSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/msg" />
+
+        <ImageView
+            android:tint="@color/colorNoSelect"
+            android:id="@+id/plant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:src="@mipmap/plant" />
+
+        <ImageView
+            android:tint="@color/colorNoSelect"
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:src="@mipmap/person" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

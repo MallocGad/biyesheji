@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ht.university.house.mapper.HouseMapper">
+    <select id="selectHouseDetailById" resultType="com.ht.university.house.entity.HouseDetail" parameterType="java.lang.Long">
+        select house.house_id houseId, <!--温室编号-->
+            house.house_name houseName,
+            house.plant_id plantId,
+            house.house_owner_id houseOwnerId,
+            house.plant_time plantTime,
+            plant.plant_max_oC plantMaxOc,
+            plant.plant_min_oC plantMinOC,
+            plant.plant_name plantName,
+            plant.plant_comment plantComment,
+            plant.plant_min_PH  plantMinPH,
+            plant.plant_max_PH plantMaxPH,
+            plant.plant_max_RH plantMaxRH,
+            plant.plant_min_RH plantMinRH,
+            plant.plant_max_lx plantMaxLx,
+            plant.plant_min_lx plantMinLx,
+            plant.plant_max_ppm plantMaxPpm,
+            plant.plant_min_ppm plantMinPpm
+            from house
+        left JOIN plant on plant.plant_id = house.plant_id
+        where house_id=#{id}
+    </select>
+</mapper>

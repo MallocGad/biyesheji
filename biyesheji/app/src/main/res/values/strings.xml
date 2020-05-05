@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HTGH</string>
+    <string name="buttonMargin">30dp</string>
+    <string name="spinnerTitle">请选择</string>
+</resources>
