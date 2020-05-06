@@ -56,12 +56,7 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-//    每一小时运行一次
-//    @Scheduled(cron = "0 0 0/1 * * ?")
-//    每3小时触发一次
-    @Scheduled(cron = "0 0 0/3 * * ?")
-    //每五秒运行一次
-//    @Scheduled(cron = "0/5 * * * * ?")
+
     public void devicePutRecored() {
         List<BaseDevice> devices = repository.findAll();
         List<House> houses = houseRepository.findAll();
