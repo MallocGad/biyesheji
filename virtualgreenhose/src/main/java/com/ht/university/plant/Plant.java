@@ -42,6 +42,24 @@ public class Plant {
     @Column(name = "plant_min_ppm")
     private Float plant_minPpm;
 
+    public Plant() {
+    }
+
+    public Plant(String plantName, Float plantMinOC, Float plantMaxOC, String plantComment, Float plant_minPH, Float plant_maxPH, Float plant_maxRH, Float plant_minRH, Float plant_maxLx, Float plant_minLx, Float plant_maxPpm, Float plant_minPpm) {
+        this.plantName = plantName;
+        this.plantMinOC = plantMinOC;
+        this.plantMaxOC = plantMaxOC;
+        PlantComment = plantComment;
+        this.plant_minPH = plant_minPH;
+        this.plant_maxPH = plant_maxPH;
+        this.plant_maxRH = plant_maxRH;
+        this.plant_minRH = plant_minRH;
+        this.plant_maxLx = plant_maxLx;
+        this.plant_minLx = plant_minLx;
+        this.plant_maxPpm = plant_maxPpm;
+        this.plant_minPpm = plant_minPpm;
+    }
+
     public Long getPlantId() {
         return plantId;
     }

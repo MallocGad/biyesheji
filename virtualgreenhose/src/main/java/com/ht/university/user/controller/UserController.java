@@ -51,4 +51,18 @@ public class UserController {
         service.addUser(user);
         return ResultBody.success();
     }
+
+    @RequestMapping("edit-user")
+    public ResultBody editUser(@RequestBody UserVo param){
+        User user=new User();
+        user.setUserId(param.getUserId());
+        user.setUserName(param.getUserName());
+        user.setPassword(param.getPassword());
+        user.setEmail(param.getEmail());
+        user.setCreateDate(new Date(System.currentTimeMillis()));
+        user.setRole("user");
+        //增加和编辑是同一个service
+        service.addUser(user);
+        return ResultBody.success();
+    }
 }

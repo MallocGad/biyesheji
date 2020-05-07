@@ -17,6 +17,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * 管理员界面中  温室列表展示
+ */
 public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.HouseListViewHolder> {
     private JSONArray list;
     private Context context;
@@ -38,8 +41,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
             item = list.getJSONObject(position);
             holder.houseName.setText(item.getString("houseName"));
             holder.isDistributed.setText(
-                    StringUtils.isEmpty(
-                            item.getString("houseOwnerId"))?"未分配":"已分配");
+                            item.getString("houseOwnerId").equals("null")?"未分配":"已分配");
         } catch (JSONException e) {
             e.printStackTrace();
         }

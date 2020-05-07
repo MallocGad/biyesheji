@@ -28,13 +28,12 @@ import com.example.htgh.common.MyApplication;
 import com.example.htgh.common.Variables;
 import com.example.htgh.datasource.House.HouseDao;
 import com.example.htgh.datasource.NoticeDao;
-import com.example.htgh.ui.mianactivity.MsgListAdapter;
-import com.example.htgh.ui.mianactivity.SelectAdapter;
+import com.example.htgh.ui.adapter.MsgListAdapter;
+import com.example.htgh.ui.adapter.SelectAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;

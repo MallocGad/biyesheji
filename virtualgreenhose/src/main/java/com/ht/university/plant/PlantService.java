@@ -4,6 +4,7 @@ import com.ht.university.house.mapper.HouseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.beans.Transient;
 import java.util.List;
 
 /**
@@ -39,6 +40,7 @@ public class PlantService {
      * 删除
      * @param id
      */
+    @Transient
     public void deletePlant(Long id){
         plantRepository.deleteById(id);
         //删除植物后 对应温室的plantid应该设置为null

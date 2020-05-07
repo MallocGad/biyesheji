@@ -21,6 +21,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * 管理员界面中用户列表展示
+ */
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserListViewHolder>{
     private Context mContext;
 

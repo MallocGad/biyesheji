@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b077e815-9e29-46b6-a1af-17b3ff07c26b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../biyesheji/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/tasks/DataGenerate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddNotices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/PlantListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_add_notices.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/plant_list_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/plant/PlantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/plant/PlantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/user/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminNoticeManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminNoticeManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminPlantManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminPlantManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/HouseListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/HouseListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/NoticeListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/NoticeListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/UserListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/UserListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/mianactivity/MsgListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/MsgListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/mianactivity/SelectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/SelectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_plant_manage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_plant_manage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/main_msg_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/main_msg_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/notice_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/notice_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/UniversityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/UniversityApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/house/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/house/service/impl/HouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/notice/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/notice/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/PlantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/PlantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/controller/UserController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,7 +79,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.UniversityApplication">
+    <configuration name="TestDataService.addDatas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="university" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ht.university.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ht.university" />
+      <option name="MAIN_CLASS_NAME" value="com.ht.university.TestDataService" />
+      <option name="METHOD_NAME" value="addDatas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UniversityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="university" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ht.university.UniversityApplication" />
@@ -66,6 +103,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestDataService.addDatas" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -78,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1588679902688</updated>
       <workItem from="1588679904238" duration="1878000" />
-      <workItem from="1588727506650" duration="2093000" />
+      <workItem from="1588727506650" duration="5578000" />
+      <workItem from="1588815886645" duration="6886000" />
     </task>
     <servers />
   </component>

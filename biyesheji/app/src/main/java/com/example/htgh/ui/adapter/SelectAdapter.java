@@ -1,11 +1,10 @@
-package com.example.htgh.ui.mianactivity;
+package com.example.htgh.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +17,9 @@ import org.json.JSONObject;
 
 import java.util.List;
 
+/**
+ *普通用户中  选择温室的adapter
+ */
 public class SelectAdapter extends ArrayAdapter<JSONObject> {
     private int resourceId;
 

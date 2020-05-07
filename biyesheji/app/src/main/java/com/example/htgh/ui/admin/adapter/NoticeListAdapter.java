@@ -21,6 +21,9 @@ import org.json.JSONObject;
 
 import java.util.Date;
 
+/**
+ * 管理员界面中通知列表展示
+ */
 public class NoticeListAdapter extends RecyclerView.Adapter {
     private Context context;
     private JSONArray list;

@@ -7,6 +7,8 @@ import com.example.htgh.common.ApiService;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.PasswordAuthentication;
+
 /**
  * 用户接口层請求
  */
@@ -52,5 +54,28 @@ public class UserDao {
             e.printStackTrace();
         }
         ApiService.sendRequest("api-user/delete-user",param,intent);
+    }
+
+    /**
+     * 编辑用户
+     * @param intent
+     * @param id
+     * @param userName
+     * @param password
+     * @param role
+     * @param email
+     */
+    public void editUser(Intent intent,Long id,String userName, String password, String role, String email){
+        JSONObject param=new JSONObject();
+        try {
+            param.put("userId",id);
+            param.put("userName",userName);
+            param.put("password",password);
+            param.put("role",role);
+            param.put("email",email);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        ApiService.sendRequest("api-user/edit-user",param,intent);
     }
 }

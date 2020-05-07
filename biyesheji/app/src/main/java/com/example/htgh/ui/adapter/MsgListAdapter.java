@@ -1,4 +1,4 @@
-package com.example.htgh.ui.mianactivity;
+package com.example.htgh.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.htgh.ActivtyChart;
 import com.example.htgh.NoticeDetail;
 import com.example.htgh.R;
 import com.example.htgh.common.TimeUtils;
@@ -18,11 +17,12 @@ import com.example.htgh.common.TimeUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.Date;
-import java.util.List;
 
+/**
+ * 普通用户中 信息列表展示
+ */
 public class MsgListAdapter extends RecyclerView.Adapter<MsgListAdapter.MsgListViewHolder> {
 
     private Context mContext;

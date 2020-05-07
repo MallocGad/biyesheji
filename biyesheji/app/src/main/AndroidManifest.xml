@@ -16,8 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.admin.AdminPlantManage"></activity>
-        <activity android:name=".ui.admin.AdminNoticeManage" />
+        <activity android:name=".ui.admin.AdminAddNotices"></activity>
+        <activity android:name=".ui.admin.AdminPlantManage" />
+        <activity android:name=".ui.admin.AdminNoticeManage"
+            android:launchMode="singleInstance"/>
         <activity android:name=".ui.admin.AdminAddHouse" />
         <activity
             android:name=".ui.admin.AdminHouseManage"

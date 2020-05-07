@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 //@ImportResource(locations = {"classpath:beans.xml"})//添加spring配置文件  推荐使用配置类代替
-@EnableScheduling
+//@EnableScheduling
 @SpringBootApplication
 public class UniversityApplication {
 

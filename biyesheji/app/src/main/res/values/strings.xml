@@ -2,4 +2,10 @@
     <string name="app_name">HTGH</string>
     <string name="buttonMargin">30dp</string>
     <string name="spinnerTitle">请选择</string>
+    <string-array name="catagory">
+        <item>任务通知</item>
+        <item>科普知识</item>
+        <item>新闻通知</item>
+        <item>其他</item>
+    </string-array>
 </resources>

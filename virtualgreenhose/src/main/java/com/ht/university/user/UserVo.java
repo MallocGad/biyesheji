@@ -17,6 +17,17 @@ public class UserVo {
     private String role;
     private String email;
 
+    public UserVo() {
+    }
+
+    public UserVo(Long userId, String userName, String password, String role, String email) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.role = role;
+        this.email = email;
+    }
+
     public String getEmail() {
         return email;
     }

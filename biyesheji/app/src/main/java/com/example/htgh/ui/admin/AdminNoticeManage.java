@@ -38,9 +38,17 @@ public class AdminNoticeManage extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+
+                Intent intent=new Intent(AdminNoticeManage.this,AdminAddNotices.class);
+                startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        displayNotices();
     }
 
     public void displayNotices(){
