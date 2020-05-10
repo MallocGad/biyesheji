@@ -14,18 +14,19 @@ import com.example.htgh.R;
 import com.example.htgh.common.ApiService;
 import com.example.htgh.datasource.user.UserDao;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AdminAddUser extends AppCompatActivity {
     EditText username, email, pwd, pwdConfirm;
     Button save;
+    JSONArray users=null;
     private boolean status = true;
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +38,22 @@ public class AdminAddUser extends AppCompatActivity {
         pwd = findViewById(R.id.pwd);
         pwdConfirm = findViewById(R.id.pwd_confirm);
         save = findViewById(R.id.save);
+        final Intent intent = getIntent();
+        String response = intent.getStringExtra("response");
+        try {
+            JSONObject obj=new JSONObject(response);
+            users=obj.getJSONArray("data");
 
+        } catch (JSONException e) {
+
+        }
         save.setEnabled(false);
         setWatcher();
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UserDao userDao=new UserDao();
-                Intent intent = getIntent();
+
                 userDao.addUser(intent,username.getText().toString(),
                         pwd.getText().toString(),
                         email.getText().toString());
@@ -87,6 +96,9 @@ public class AdminAddUser extends AppCompatActivity {
                 if (nameS.length() < 2 || nameS.length() > 12) {
                     flag = false;
                     username.setError("用户名在2-12个字符间");
+                }else if(userNameExist(nameS)){
+                    flag=false;
+                    username.setError("用户名已存在");
                 }
                 if (emailS==""||!jugeEmail(emailS)) {
                     flag = false;
@@ -131,5 +143,18 @@ public class AdminAddUser extends AppCompatActivity {
         //插卡是否匹配
         Matcher matcher = pattern.matcher(s);
         return matcher.matches();
+    }
+
+    public boolean userNameExist(String s){
+        for(int i=0;i<users.length();i++){
+            try {
+                JSONObject item= users.getJSONObject(i);
+                if(item.get("userName").equals(s))
+                    return true;
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
     }
 }

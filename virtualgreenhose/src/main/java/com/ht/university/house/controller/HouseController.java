@@ -74,8 +74,24 @@ public class HouseController {
         return ResultBody.success();
     }
 
+    /**
+     * 编辑温室
+     * @param param
+     * @return
+     */
+    @RequestMapping("/edit-house")
+    public ResultBody editHouse(@RequestBody HouseVo param){
+        House house=new House();
+        house.setHouseId(param.getHouseId());
+        house.setHouseName(param.getHouseName());
+        house.setHouseOwnerId(param.getHouseOwnerId());
+        house.setPlantId(param.getPlantId());
+        service.addHouse(house);
+        return ResultBody.success();
+    }
     @RequestMapping("/delete-house")
     public RequestBody deleteHouse(@RequestBody HouseVo param){
+        service.deleteHouse(param.getHouseId());
         return null;
     }
 }

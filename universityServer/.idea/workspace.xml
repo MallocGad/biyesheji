@@ -2,33 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b077e815-9e29-46b6-a1af-17b3ff07c26b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddNotices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/PlantListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_add_notices.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/plant_list_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddPlant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminEditHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_add_plant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_edit_house.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/plant/PlantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/plant/PlantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/House/HouseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/House/HouseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/NoticeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/datasource/user/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminNoticeManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminNoticeManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/MsgListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/MsgListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddNotices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddNotices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminAddUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminPlantManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminPlantManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminUserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/AdminUserManage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/HouseListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/HouseListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/NoticeListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/NoticeListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/PlantListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/PlantListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/UserListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/admin/adapter/UserListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/mianactivity/MsgListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/MsgListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/mianactivity/SelectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/java/com/example/htgh/ui/adapter/SelectAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_plant_manage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/activity_admin_plant_manage.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/main_msg_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/main_msg_list_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/notice_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/layout/notice_list_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biyesheji/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biyesheji/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/UniversityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/UniversityApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/house/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/house/controller/HouseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/notice/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/notice/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/PlantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/plant/PlantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/UserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/main/java/com/ht/university/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualgreenhose/src/test/java/com/ht/university/TestDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualgreenhose/src/test/java/com/ht/university/TestDataService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +116,13 @@
       <updated>1588679902688</updated>
       <workItem from="1588679904238" duration="1878000" />
       <workItem from="1588727506650" duration="5578000" />
-      <workItem from="1588815886645" duration="6886000" />
+      <workItem from="1588815886645" duration="9174000" />
+      <workItem from="1588861235852" duration="2181000" />
+      <workItem from="1588907576611" duration="3154000" />
+      <workItem from="1588925874052" duration="621000" />
+      <workItem from="1588930798055" duration="4228000" />
+      <workItem from="1588999447246" duration="5997000" />
+      <workItem from="1589069332473" duration="793000" />
     </task>
     <servers />
   </component>

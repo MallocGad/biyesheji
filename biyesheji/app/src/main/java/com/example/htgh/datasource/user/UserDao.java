@@ -37,7 +37,6 @@ public class UserDao {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         ApiService.sendRequest("/api-user/add-user",param,intent);
     }
 

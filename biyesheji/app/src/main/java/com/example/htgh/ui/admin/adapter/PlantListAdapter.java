@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.htgh.R;
+import com.example.htgh.common.ApiService;
 import com.example.htgh.common.TimeUtils;
 import com.example.htgh.datasource.plant.PlantDao;
 
@@ -61,7 +63,7 @@ public class PlantListAdapter  extends RecyclerView.Adapter{
             public void onClick(View v) {
                 AlertDialog alertDialog=new AlertDialog.Builder(context)
                         .setTitle("删除记录")
-                        .setMessage("确定删除此用户吗?")
+                        .setMessage("确定删除此记录吗?")
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -73,6 +75,15 @@ public class PlantListAdapter  extends RecyclerView.Adapter{
                                 }
                                 Intent intent=new Intent();
                                 new PlantDao().deletePlants(intent,new Long(id));
+                                while(true) {
+                                    int status = intent.getIntExtra("requestStatus", -1);
+                                    System.out.println("状态码：" + status);
+                                    if (status != ApiService.LODING) {
+                                        String response = intent.getStringExtra("response");
+                                        System.out.println(response);
+                                        break;
+                                    }
+                                }
                                 list.remove(position);
                                 notifyItemRemoved(position);
                                 notifyItemRangeChanged(0,list.length()-1);
@@ -91,6 +102,7 @@ public class PlantListAdapter  extends RecyclerView.Adapter{
         plantHolder.editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(context,"功能暂未开放",Toast.LENGTH_SHORT).show();
 
             }
         });

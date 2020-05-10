@@ -77,6 +77,8 @@ public class TestDataService {
 
 
             for (House house : houses) {
+                if(house.getPlantId()==null)
+                    continue;
                 HouseDetail houseDetail = mapper.selectHouseDetailById(house.getHouseId());
                 /****光照*****/
                 devices.get(0).setMax(houseDetail.getPlantMaxLx());

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.admin.AdminAddPlant">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttom"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/colorGray"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="新增种子信息"
+                android:textColor="@color/colorBlack"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/center3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/header3"
+            android:layout_weight="0.9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="40dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/admin_plant_manage" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="种子名称  ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/plantName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="2-12个字符"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="温度范围  ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ocMin"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="min"
+                        android:digits="1234567890."
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:textColor="@color/colorBlack"
+                        android:text="——"
+                        android:maxLines="1"/>
+                    <EditText
+                        android:id="@+id/ocMax"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="max"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="光照范围  ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/lxMin"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="min"
+                        android:digits="1234567890."
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:textColor="@color/colorBlack"
+                        android:text="——"
+                        android:maxLines="1"/>
+                    <EditText
+                        android:id="@+id/lxMax"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="max"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="PH范围  ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/PHMin"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="min"
+                        android:digits="1234567890."
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:textColor="@color/colorBlack"
+                        android:text="——"
+                        android:maxLines="1"/>
+                    <EditText
+                        android:id="@+id/PHMax"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="max"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="湿度范围  ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/RHMin"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="min"
+                        android:digits="1234567890."
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:textColor="@color/colorBlack"
+                        android:text="——"
+                        android:maxLines="1"/>
+                    <EditText
+                        android:id="@+id/RHMax"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="max"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="CO2范围  ："
+                        android:maxLines="1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/PPMMin"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="min"
+                        android:digits="1234567890."
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:textColor="@color/colorBlack"
+                        android:text="——"
+                        android:maxLines="1"/>
+                    <EditText
+                        android:id="@+id/PPMMax"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="max"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_margin_top">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right"
+                        android:text="备注信息 ："
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/plant_comment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:background="@color/colorGray"
+                        android:paddingLeft="10dp"
+                        android:hint="备注"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        android:background="#0DC3D8"
+                        android:text="保存" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

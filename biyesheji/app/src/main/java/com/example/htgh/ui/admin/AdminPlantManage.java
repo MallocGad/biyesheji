@@ -37,7 +37,8 @@ public class AdminPlantManage extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(AdminPlantManage.this,AdminAddPlant.class);
+                startActivity(intent);
             }
         });
     }

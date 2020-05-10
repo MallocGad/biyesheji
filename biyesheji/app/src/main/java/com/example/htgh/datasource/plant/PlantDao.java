@@ -37,10 +37,10 @@ public class PlantDao {
         ApiService.sendRequest("api-plant/delete-plant",param,intent);
     }
 
-    public void addPlants(Intent intent, String plantName, Float plantMinOC, Float plantMaxOC,
-                          String plantComment, Float plant_minPH, Float plant_maxPH,
-                          Float plant_maxRH, Float plant_minRH, Float plant_maxLx,
-                          Float plant_minLx, Float plant_maxPpm, Float plant_minPpm){
+    public void addPlants(Intent intent, String plantName, String plantMinOC, String plantMaxOC,
+                          String plantComment, String plant_minPH, String plant_maxPH,
+                          String plant_maxRH, String plant_minRH, String plant_maxLx,
+                          String plant_minLx, String plant_maxPpm, String plant_minPpm){
         JSONObject param=new JSONObject();
         try {
             param.put("plantName",plantName);

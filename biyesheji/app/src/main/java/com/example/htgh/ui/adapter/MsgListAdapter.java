@@ -53,7 +53,10 @@ public class MsgListAdapter extends RecyclerView.Adapter<MsgListAdapter.MsgListV
             Date time = TimeUtils.jsonDateToDate(item.getString("createTime"));
             holder.notice_time.setText((time.getMonth()+1)+"-"+time.getDate());
             final String content = item.getString("content");
-            holder.notice_content.setText(content.substring(0,18)+(content.length()>18?"...":""));
+            if(content.length()<18){
+                holder.notice_content.setText(content);
+            }else
+                holder.notice_content.setText(content.substring(0,18)+"...");
             final JSONObject finalItem = item;
             holder.item.setOnClickListener(new View.OnClickListener() {
                 @Override

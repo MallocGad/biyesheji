@@ -2,10 +2,7 @@ package com.ht.university.notice;
 
 import com.ht.university.common.result.ResultBody;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,4 +28,11 @@ public class NoticeController {
         service.addNotice(param.getTitle(),param.getContent());
         return ResultBody.success();
     }
+
+    @RequestMapping("delete-notice")
+    public ResultBody deeteNotice(@RequestBody NoticeVo param){
+        service.deleteNotice(param.getNoticeId());
+        return ResultBody.success();
+    }
+
 }

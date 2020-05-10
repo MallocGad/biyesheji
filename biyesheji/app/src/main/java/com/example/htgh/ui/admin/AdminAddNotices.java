@@ -48,7 +48,7 @@ public class AdminAddNotices extends AppCompatActivity {
     }
 
     public void init(){
-        submit.setEnabled(false);
+        submit.setEnabled(true);
         TextWatcher titleWatch=new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -63,7 +63,7 @@ public class AdminAddNotices extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if(s.length()==0) {
-                    submit.setEnabled(true);
+                    submit.setEnabled(false);
                     title.setError("标题不能为空");
                 }
             }

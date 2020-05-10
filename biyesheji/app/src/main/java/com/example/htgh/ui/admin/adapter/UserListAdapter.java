@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.htgh.R;
+import com.example.htgh.common.ApiService;
 import com.example.htgh.datasource.user.UserDao;
 import com.example.htgh.ui.admin.AdminMainActivity;
 
@@ -70,6 +72,15 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
                                 }
                                 Intent intent=new Intent();
                                 new UserDao().deleteUser(intent,id);
+                                while(true) {
+                                    int status = intent.getIntExtra("requestStatus", -1);
+                                    System.out.println("状态码：" + status);
+                                    if (status != ApiService.LODING) {
+                                        String response = intent.getStringExtra("response");
+                                        System.out.println(response);
+                                        break;
+                                    }
+                                }
                                 userList.remove(position);
                                 notifyItemRemoved(position);
                                 notifyItemRangeChanged(0,userList.length()-1);
@@ -88,6 +99,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(mContext,"功能暂未开放",Toast.LENGTH_SHORT).show();
 
             }
         });

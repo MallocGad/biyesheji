@@ -72,6 +72,7 @@ public class AdminUserManage extends AppCompatActivity {
                 try {
                     JSONObject obj=new JSONObject(response);
                     users=obj.getJSONArray("data");
+
                 } catch (JSONException e) {
 
                 }

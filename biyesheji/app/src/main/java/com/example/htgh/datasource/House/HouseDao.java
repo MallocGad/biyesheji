@@ -29,6 +29,23 @@ public class HouseDao {
         }
     }
 
+    public void editHouse(Intent intent,int houseId,String houseName,int userId,int plantId){
+        JSONObject param=new JSONObject();
+        try {
+            param.put("houseName",houseName);
+            param.put("houseId",houseId);
+            if (userId!=-1)
+                param.put("houseOwnerId",userId);
+            if(plantId!=-1)
+                param.put("plantId",plantId);
+            ApiService.sendRequest("api-house/edit-house",param,intent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
     public void getHouseDetail(int id,Intent intent){
         JSONObject param=new JSONObject();
         try {
@@ -39,8 +56,25 @@ public class HouseDao {
         ApiService.sendRequest("api-house/get-house-detail",param,intent);
     }
 
+    /**
+     * 获取所有温室信息
+     * @param intent
+     */
     public void getAllHouses(Intent intent){
         ApiService.sendRequest("api-house/get-all-houses",null,intent);
+    }
+
+    /**
+     * 删除温室
+     */
+    public void deleteHouse(Intent intent,Long houseId){
+        JSONObject param=new JSONObject();
+        try {
+            param.put("houseId",houseId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        ApiService.sendRequest("api-house/delete-house",param,intent);
     }
 
     /**
